@@ -15,4 +15,9 @@ public class ClienteServiceImpl implements ClienteService{
     public List<Clientes> listacliente() {
         return clientesRepository.findAll();
     }
+
+    @Override
+    public Clientes mostrarcliente(int id) {
+        return clientesRepository.findById(id).orElse(null);
+    }
 }
